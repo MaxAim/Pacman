@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: Helvetica;
+    line-height: 1.5;
+  }
+
+  
+  div.ball{
+    width: 0;
+    height: 0;
+    border: 25px solid yellow;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-radius: 50%;
+    pointer-events: none;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    animation: chompRight 0.5s step-end infinite;
+  }
+  
+@keyframes chompRight {
+    0%{
+        border-right: 25px solid transparent;
+    }
+    50%{
+        border-right: 25px solid yellow;
+    }
+}
+
+@keyframes chompLeft {
+    0%{
+        border-left: 25px solid transparent;
+    }
+    50%{
+        border-left: 25px solid yellow;
+    }
+}
+
+@keyframes chompUp {
+    0%{
+        border-top: 25px solid transparent;
+    }
+    50%{
+        border-top: 25px solid yellow;
+    }
+}
+
+@keyframes chompDown {
+    0%{
+        border-bottom: 25px solid transparent;
+    }
+    50%{
+        border-bottom: 25px solid yellow;
+    }
+}
